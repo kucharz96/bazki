@@ -20,9 +20,12 @@ public class main {
 		// TODO Auto-generated method stub
 		System.out.println("Elo");
 		MongoClient mongoClient = new MongoClient("localhost", 27017);
-		DB database = mongoClient.getDB("Kamil");
+		DB database = mongoClient.getDB("baza");
 		mongoClient.getDatabaseNames().forEach(System.out::println);
-
+		DBCollection collection = database.getCollection("Pacjenci");
+		DBObject person = new BasicDBObject("_id", "jo");
+		collection.insert(person);
+		
 	}
 
 }
