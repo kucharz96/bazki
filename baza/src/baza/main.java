@@ -25,7 +25,7 @@ public class main {
 		DBCollection collection = database.getCollection("Pacjenci");
 		DBObject person = new BasicDBObject("_id", "jo");
 		collection.insert(person);
-		
+		//
 	}
 
 }
